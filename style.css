@@ -440,6 +440,10 @@ body {
     box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.6), 0 0 24px -6px var(--accent-glow);
 }
 
+.card + .card {
+    margin-top: 2rem;
+}
+
 .card-header-icon {
     display: inline-flex;
     align-items: center;

@@ -111,6 +111,10 @@ body {
     color: var(--text-primary);
 }
 
+.nav-links a.btn {
+    color: #ffffff !important;
+}
+
 .nav-cta {
     margin-left: 0.75rem;
 }
@@ -130,18 +134,40 @@ body {
     text-decoration: none;
     cursor: pointer;
     transition: all var(--transition-normal);
+    color: #ffffff;
 }
 
 .btn-primary {
-    background: var(--accent-color);
-    color: #040810;
-    box-shadow: 0 4px 14px 0 rgba(56, 189, 248, 0.25);
+    background: #0284c7;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px 0 rgba(2, 132, 199, 0.35);
 }
 
 .btn-primary:hover {
+    background: #0369a1;
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px 0 rgba(56, 189, 248, 0.4);
-    filter: brightness(1.05);
+    box-shadow: 0 6px 20px 0 rgba(2, 132, 199, 0.5);
+    color: #ffffff !important;
+}
+
+.btn-linkedin {
+    background-color: #0a66c2;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 14px 0 rgba(10, 102, 194, 0.4);
+}
+
+.btn-linkedin:hover {
+    background-color: #004182;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px 0 rgba(10, 102, 194, 0.6);
+}
+
+.btn-linkedin svg,
+.btn-primary svg {
+    fill: currentColor;
+    color: #ffffff;
 }
 
 .btn-secondary {
@@ -222,8 +248,22 @@ body {
 .hero-actions {
     display: flex;
     gap: 1rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
     flex-wrap: wrap;
+}
+
+.hero-quote {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.hero-quote-author {
+    font-style: normal;
+    color: var(--accent-color);
+    font-weight: 500;
 }
 
 /* ==========================================================================

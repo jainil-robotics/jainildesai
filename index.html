@@ -4,57 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jainil N. Desai | Engineering Leadership & Supply Chain Innovation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">JD.</div>
-        <div class="links">
-            <a href="#patents">Patents</a>
-            <a href="#impact">Case Studies</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <h1>Jainil N. Desai</h1>
-        <p class="subtitle">Senior Engineering Leader & Technical Innovator</p>
-        <p class="summary">
-            Orchestrating large-scale distributed systems, automated fulfillment, and cloud warehouse operations. Driving multi-million-dollar operational efficiencies and scaling high-performing engineering teams across industry leaders like Walmart and Amazon.
-        </p>
-        <div class="actions">
-            <a href="#contact" class="btn">Connect</a>
+    <!-- Sticky Glass Navigation -->
+    <header class="header-wrapper">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <span class="logo-badge">JD</span>
+                    <span>Jainil Desai</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#patents">Patents</a>
+                    <a href="#impact">Case Studies</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#contact" class="btn btn-primary btn-sm nav-cta">Connect</a>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <section id="patents" class="section">
-            <h2>Commercialized Patents & IP</h2>
-            <div class="card">
-                <h3>Supply Chain & Fulfillment Architecture</h3>
-                <p>Inventor on three commercialized patents addressing complex bottlenecks in physical distribution, intelligent inventory routing, and scalable fulfillment operations.</p>
+    <main class="container">
+        <!-- Executive Hero Section -->
+        <section class="hero">
+            <div class="hero-pill">
+                <span class="hero-pill-dot"></span>
+                <span>Engineering Leadership & Supply Chain Innovation</span>
+            </div>
+            <h1>Jainil N. Desai</h1>
+            <p class="subtitle">Senior Engineering Leader & Technical Innovator</p>
+            <p class="summary">
+                Orchestrating large-scale distributed systems, automated fulfillment, and cloud warehouse operations. Driving multi-million-dollar operational efficiencies and scaling high-performing engineering teams across industry leaders like Walmart and Amazon.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Connect</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#patents" class="btn btn-secondary">Explore Patents</a>
+            </div>
+
+            <!-- Quick-Impact Metrics Strip -->
+            <div class="metrics-strip">
+                <div class="metric-card">
+                    <div class="metric-value">3</div>
+                    <div class="metric-label">Commercialized Patents</div>
+                    <div class="metric-sub">Physical distribution & inventory routing</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">Enterprise</div>
+                    <div class="metric-label">Cloud Warehouse Scale</div>
+                    <div class="metric-sub">High-throughput fulfillment networks</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">Proven</div>
+                    <div class="metric-label">Engineering Leadership</div>
+                    <div class="metric-sub">Impact at scale across Walmart & Amazon</div>
+                </div>
             </div>
         </section>
 
+        <!-- Commercialized Patents & IP Section -->
+        <section id="patents" class="section">
+            <div class="section-header">
+                <div class="section-eyebrow">// Intellectual Property</div>
+                <h2 class="section-title">Commercialized Patents & IP</h2>
+            </div>
+            
+            <div class="card">
+                <div class="card-header-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                </div>
+                <h3>Supply Chain & Fulfillment Architecture</h3>
+                <p>Inventor on three commercialized patents addressing complex bottlenecks in physical distribution, intelligent inventory routing, and scalable fulfillment operations.</p>
+                
+                <div class="tag-list">
+                    <span class="tag accent">Commercialized IP</span>
+                    <span class="tag">Inventory Routing</span>
+                    <span class="tag">Physical Distribution</span>
+                    <span class="tag">Automated Fulfillment</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architectural & Operational Impact Section -->
         <section id="impact" class="section">
-            <h2>Architectural & Operational Impact</h2>
+            <div class="section-header">
+                <div class="section-eyebrow">// Case Studies & Leadership</div>
+                <h2 class="section-title">Architectural & Operational Impact</h2>
+            </div>
+            
             <div class="grid">
                 <div class="card">
+                    <div class="card-header-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                    </div>
                     <h3>Enterprise Cloud Warehousing</h3>
                     <p>Designed and scaled high-throughput warehouse networks, bridging the critical gap between software systems and physical hardware/dock operations.</p>
+                    <div class="tag-list">
+                        <span class="tag accent">Cloud Warehousing</span>
+                        <span class="tag">Hardware/Dock Systems</span>
+                        <span class="tag">High Throughput</span>
+                    </div>
                 </div>
+                
                 <div class="card">
+                    <div class="card-header-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
                     <h3>Cross-Functional Engineering Leadership</h3>
                     <p>Led engineering transformations across hardware and software boundaries, establishing operational rigor and high availability without sacrificing rapid innovation.</p>
+                    <div class="tag-list">
+                        <span class="tag accent">Engineering Management</span>
+                        <span class="tag">High Availability</span>
+                        <span class="tag">Operational Rigor</span>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="contact">
-        <p>Based in Schaumburg, Illinois.</p>
-        <div class="footer-links">
-            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    <!-- Executive Footer & Contact -->
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <div class="location-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Based in Schaumburg, Illinois.</span>
+                </div>
+                <div class="copyright">
+                    &copy; 2026 Jainil N. Desai. All rights reserved.
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
         </div>
     </footer>
 </body>

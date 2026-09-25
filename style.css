@@ -906,6 +906,107 @@ body.drawer-open {
     line-height: 1;
 }
 
+.cs-subheading {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 1.5rem 0 0.65rem;
+    letter-spacing: -0.01em;
+}
+
+.cs-flow-box {
+    background: rgba(56, 189, 248, 0.05);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 8px;
+    padding: 0.9rem 1.15rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    line-height: 1.55;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 1.15rem 0;
+}
+
+.cs-callout-card {
+    background: rgba(255, 255, 255, 0.025);
+    border-left: 3px solid var(--accent-color);
+    border-radius: 0 8px 8px 0;
+    padding: 0.85rem 1.15rem;
+    margin: 0.85rem 0;
+}
+
+.cs-callout-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+}
+
+.cs-callout-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.cs-patent-card {
+    display: block;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.85rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--transition-normal);
+}
+
+.cs-patent-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--border-highlight);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cs-patent-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+}
+
+.cs-patent-num {
+    font-size: 0.825rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    letter-spacing: 0.03em;
+}
+
+.cs-patent-card svg {
+    color: var(--text-muted);
+    transition: color var(--transition-fast);
+}
+
+.cs-patent-card:hover svg {
+    color: var(--accent-color);
+}
+
+.cs-patent-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+    line-height: 1.35;
+}
+
+.cs-patent-focus {
+    font-size: 0.885rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
 /* Hidden templates store */
 .case-study-template-store {
     display: none;

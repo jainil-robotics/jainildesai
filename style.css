@@ -26,7 +26,7 @@
 
 html {
     scroll-behavior: smooth;
-    scrollbar-gutter: stable;
+    overflow-x: hidden;
 }
 
 body {
@@ -40,6 +40,8 @@ body {
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
@@ -234,10 +236,10 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    font-size: clamp(1.85rem, 5.5vw, 4.25rem);
     font-weight: 800;
     letter-spacing: -0.03em;
-    line-height: 1.1;
+    line-height: 1.15;
     margin-bottom: 0.75rem;
     color: #ffffff;
 }
@@ -660,6 +662,256 @@ a.sub-bubble {
 }
 
 /* ==========================================================================
+   Interactive Case Study Cards & Drawer
+   ========================================================================== */
+.case-study-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.case-study-card:hover h3 {
+    color: var(--accent-color);
+}
+
+.case-study-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.case-study-card:hover .case-study-action {
+    transform: translateX(4px);
+}
+
+/* Prevent body scroll when drawer is open */
+body.drawer-open {
+    overflow: hidden;
+}
+
+/* Drawer Component */
+.drawer-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+.drawer-overlay.is-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.drawer-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 8, 15, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.drawer-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 700px;
+    background: #0b111e;
+    border-left: 1px solid var(--border-highlight);
+    box-shadow: -15px 0 50px rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-overlay.is-active .drawer-panel {
+    transform: translateX(0);
+}
+
+.drawer-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.75rem 2rem;
+    background: rgba(11, 17, 30, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.drawer-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 0.35rem;
+}
+
+.drawer-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    line-height: 1.25;
+}
+
+.drawer-close-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.drawer-close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.drawer-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem 2rem 3rem;
+    scrollbar-gutter: stable;
+}
+
+.drawer-footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.15rem 2rem;
+    background: rgba(11, 17, 30, 0.95);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border-subtle);
+}
+
+/* Case Study Content Styles */
+.cs-section {
+    margin-bottom: 2.25rem;
+}
+
+.cs-section:last-child {
+    margin-bottom: 0;
+}
+
+.cs-eyebrow {
+    font-size: 0.775rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.cs-heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.85rem;
+}
+
+.cs-text {
+    font-size: 0.985rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.cs-text:last-child {
+    margin-bottom: 0;
+}
+
+.cs-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0;
+}
+
+.cs-kpi-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+}
+
+.cs-kpi-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+.cs-kpi-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    letter-spacing: 0.03em;
+}
+
+.cs-bullet-list {
+    list-style: none;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.cs-bullet-item {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.975rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.cs-bullet-item::before {
+    content: "•";
+    position: absolute;
+    left: 0.35rem;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Hidden templates store */
+.case-study-template-store {
+    display: none;
+}
+
+/* ==========================================================================
    Responsive Adaptations
    ========================================================================== */
 @media (max-width: 860px) {
@@ -670,18 +922,39 @@ a.sub-bubble {
 }
 
 @media (max-width: 640px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
     .navbar {
         height: auto;
-        padding: 1.25rem 0;
+        padding: 1rem 0;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+        align-items: stretch;
+        gap: 0.85rem;
+    }
+
+    .navbar .logo {
+        justify-content: flex-start;
     }
 
     .nav-links {
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
         flex-wrap: wrap;
-        gap: 1rem;
+    }
+
+    .nav-links a:not(.btn) {
+        font-size: 0.85rem;
+    }
+
+    .nav-links .btn-sm {
+        padding: 0.35rem 0.65rem;
+        font-size: 0.775rem;
+        gap: 0.3rem;
     }
 
     .nav-cta {
@@ -689,15 +962,103 @@ a.sub-bubble {
     }
 
     .hero {
-        padding: 3.5rem 0 3rem;
+        padding: 2.75rem 0 2.5rem;
+    }
+
+    .hero-pill {
+        white-space: normal;
+        font-size: clamp(0.68rem, 2.5vw, 0.75rem);
+        line-height: 1.35;
+        padding: 0.4rem 0.75rem;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+
+    .hero .subtitle {
+        font-size: 1.15rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .hero .summary {
+        font-size: 0.975rem;
+        line-height: 1.6;
+        margin-bottom: 1.75rem;
     }
 
     .hero-actions {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .section {
+        padding: 3.5rem 0;
+    }
+
+    .card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .patent-subgrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .footer-content {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .drawer-panel {
+        max-width: 100%;
+    }
+
+    .drawer-header, .drawer-body, .drawer-footer {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .drawer-title {
+        font-size: 1.25rem;
+    }
+
+    .cs-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .cs-kpi-card {
+        padding: 0.75rem 0.85rem;
+    }
+
+    .cs-kpi-value {
+        font-size: 1.35rem;
+    }
+
+    .cs-kpi-label {
+        font-size: 0.725rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .nav-links {
+        gap: 0.35rem;
+    }
+
+    .nav-links a:not(.btn) {
+        font-size: 0.8rem;
+    }
+
+    .nav-links .btn-sm {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.725rem;
+    }
+
+    .cs-kpi-grid {
+        grid-template-columns: 1fr;
     }
 }

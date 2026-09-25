@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
             templateId: 'content-containerization'
         },
         'first-time-robotics': {
-            title: 'The First Time approach to Robotics',
-            tag: 'Greenfield Automation & Associate Safety',
+            title: 'The First-Time Approach to Robotics: Zero-to-One Automation',
+            tag: 'Enterprise Automation Strategy & AMR Architecture',
             hash: 'case-study-first-time-robotics',
             templateId: 'content-first-time-robotics'
         },

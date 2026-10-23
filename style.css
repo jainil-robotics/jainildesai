@@ -1,17 +1,17 @@
 :root {
-    --bg-base: #121316;
-    --bg-surface: rgba(26, 28, 34, 0.75);
-    --bg-surface-hover: rgba(34, 38, 46, 0.88);
-    --border-subtle: rgba(255, 255, 255, 0.07);
-    --border-highlight: rgba(2, 132, 199, 0.45);
+    --bg-base: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-hover: #f1f5f9;
+    --border-subtle: #e2e8f0;
+    --border-highlight: #93c5fd;
     
-    --text-primary: #f1f3f5;
-    --text-secondary: #9ca3af;
-    --text-muted: #6b7280;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
     
-    --accent-color: #0ea5e9;
-    --accent-gradient: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
-    --accent-glow: rgba(2, 132, 199, 0.08);
+    --accent-color: #1d4ed8;
+    --accent-gradient: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+    --accent-glow: rgba(29, 78, 216, 0.08);
     
     --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -31,9 +31,7 @@ html {
 
 body {
     background-color: var(--bg-base);
-    background-image: 
-        radial-gradient(ellipse 90% 50% at 50% -10%, rgba(2, 132, 199, 0.05), transparent 70%);
-    background-attachment: fixed;
+    background-image: none;
     color: var(--text-primary);
     font-family: var(--font-sans);
     line-height: 1.65;
@@ -56,10 +54,11 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(18, 19, 22, 0.92);
+    background: rgba(255, 255, 255, 0.94);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-subtle);
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
 }
 
 .navbar {
@@ -87,8 +86,8 @@ body {
     width: 34px;
     height: 34px;
     border-radius: 8px;
-    background: rgba(2, 132, 199, 0.12);
-    border: 1px solid rgba(2, 132, 199, 0.3);
+    background: rgba(29, 78, 216, 0.08);
+    border: 1px solid rgba(29, 78, 216, 0.2);
     color: var(--accent-color);
     font-size: 0.95rem;
     font-weight: 800;
@@ -139,15 +138,15 @@ body {
 }
 
 .btn-primary {
-    background: #0284c7;
+    background: #1d4ed8;
     color: #ffffff !important;
-    box-shadow: 0 4px 14px 0 rgba(2, 132, 199, 0.35);
+    box-shadow: 0 2px 8px 0 rgba(29, 78, 216, 0.25);
 }
 
 .btn-primary:hover {
-    background: #0369a1;
+    background: #1e40af;
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px 0 rgba(2, 132, 199, 0.5);
+    box-shadow: 0 4px 14px 0 rgba(29, 78, 216, 0.35);
     color: #ffffff !important;
 }
 
@@ -155,28 +154,28 @@ body {
     background-color: #0a66c2;
     color: #ffffff !important;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 14px 0 rgba(10, 102, 194, 0.4);
+    box-shadow: 0 2px 8px 0 rgba(10, 102, 194, 0.25);
 }
 
 .btn-linkedin:hover {
     background-color: #004182;
     color: #ffffff !important;
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px 0 rgba(10, 102, 194, 0.6);
+    box-shadow: 0 4px 14px 0 rgba(10, 102, 194, 0.4);
 }
 
 .btn-scholar {
-    background-color: #4285f4;
+    background-color: #2563eb;
     color: #ffffff !important;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 14px 0 rgba(66, 133, 244, 0.35);
+    box-shadow: 0 2px 8px 0 rgba(37, 99, 235, 0.25);
 }
 
 .btn-scholar:hover {
-    background-color: #3367d6;
+    background-color: #1d4ed8;
     color: #ffffff !important;
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px 0 rgba(66, 133, 244, 0.55);
+    box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.4);
 }
 
 .btn-scholar svg,
@@ -187,14 +186,15 @@ body {
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.04);
+    background: #ffffff;
     color: var(--text-primary);
     border: 1px solid var(--border-subtle);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: #f1f5f9;
+    border-color: #cbd5e1;
     transform: translateY(-1px);
 }
 
@@ -216,8 +216,8 @@ body {
     gap: 0.5rem;
     padding: 0.35rem 0.85rem;
     border-radius: 9999px;
-    background: rgba(2, 132, 199, 0.08);
-    border: 1px solid rgba(2, 132, 199, 0.25);
+    background: rgba(29, 78, 216, 0.06);
+    border: 1px solid rgba(29, 78, 216, 0.18);
     color: var(--accent-color);
     font-size: 0.8rem;
     font-weight: 600;
@@ -239,13 +239,13 @@ body {
     letter-spacing: -0.03em;
     line-height: 1.15;
     margin-bottom: 0.75rem;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 .hero .subtitle {
     font-size: clamp(1.2rem, 2.5vw, 1.65rem);
     font-weight: 600;
-    color: #cbd5e1;
+    color: #334155;
     margin-bottom: 1.5rem;
     letter-spacing: -0.01em;
 }
@@ -292,24 +292,24 @@ body {
 
 .metric-card {
     background: var(--bg-surface);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border-subtle);
     border-radius: 12px;
     padding: 1.25rem 1.5rem;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
     transition: all var(--transition-normal);
 }
 
 .metric-card:hover {
-    background: var(--bg-surface-hover);
+    background: #ffffff;
     border-color: var(--border-highlight);
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
 
 .metric-value {
     font-size: 1.75rem;
     font-weight: 800;
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -0.02em;
     line-height: 1.2;
     margin-bottom: 0.25rem;
@@ -358,7 +358,7 @@ body {
     font-size: clamp(1.75rem, 3.5vw, 2.35rem);
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 .scholar-badge-icon {
@@ -422,20 +422,19 @@ body {
 
 .card {
     position: relative;
-    background: var(--bg-surface);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: #ffffff;
     border: 1px solid var(--border-subtle);
     border-radius: 14px;
     padding: 2rem;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.03);
     transition: all var(--transition-normal);
 }
 
 .card:hover {
-    background: var(--bg-surface-hover);
+    background: #ffffff;
     border-color: var(--border-highlight);
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
 }
 
 .card + .card {
@@ -449,8 +448,8 @@ body {
     width: 44px;
     height: 44px;
     border-radius: 10px;
-    background: rgba(2, 132, 199, 0.1);
-    border: 1px solid rgba(2, 132, 199, 0.25);
+    background: rgba(29, 78, 216, 0.06);
+    border: 1px solid rgba(29, 78, 216, 0.15);
     color: var(--accent-color);
     margin-bottom: 1.25rem;
 }
@@ -459,7 +458,7 @@ body {
     font-size: 1.35rem;
     font-weight: 700;
     letter-spacing: -0.01em;
-    color: #ffffff;
+    color: var(--text-primary);
     margin-bottom: 0.75rem;
 }
 
@@ -483,7 +482,7 @@ body {
 }
 
 .sub-bubble {
-    background: rgba(255, 255, 255, 0.025);
+    background: #f8fafc;
     border: 1px solid var(--border-subtle);
     border-radius: 12px;
     padding: 1.35rem 1.25rem;
@@ -499,10 +498,10 @@ a.sub-bubble {
 }
 
 .sub-bubble:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: #ffffff;
     border-color: var(--border-highlight);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 16px -4px rgba(15, 23, 42, 0.08);
 }
 
 .sub-bubble-header {
@@ -529,8 +528,8 @@ a.sub-bubble {
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--accent-color);
-    background: rgba(56, 189, 248, 0.1);
-    border: 1px solid rgba(56, 189, 248, 0.25);
+    background: rgba(29, 78, 216, 0.08);
+    border: 1px solid rgba(29, 78, 216, 0.2);
     padding: 0.15rem 0.45rem;
     border-radius: 4px;
     letter-spacing: 0.05em;
@@ -540,7 +539,7 @@ a.sub-bubble {
 .sub-bubble h4 {
     font-size: 1.05rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -0.01em;
 }
 
@@ -576,16 +575,16 @@ a.sub-bubble {
     align-items: center;
     padding: 0.25rem 0.65rem;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #f1f5f9;
+    border: 1px solid var(--border-subtle);
     color: var(--text-secondary);
     font-size: 0.775rem;
     font-weight: 500;
 }
 
 .tag.accent {
-    background: rgba(2, 132, 199, 0.08);
-    border-color: rgba(2, 132, 199, 0.25);
+    background: rgba(29, 78, 216, 0.08);
+    border-color: rgba(29, 78, 216, 0.2);
     color: var(--accent-color);
 }
 
@@ -595,7 +594,7 @@ a.sub-bubble {
 .footer {
     padding: 4.5rem 0 3.5rem;
     border-top: 1px solid var(--border-subtle);
-    background: rgba(14, 15, 18, 0.85);
+    background: #f1f5f9;
 }
 
 .footer-content {
@@ -641,7 +640,7 @@ a.sub-bubble {
     gap: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.03);
+    background: #ffffff;
     border: 1px solid var(--border-subtle);
     color: var(--text-secondary);
     text-decoration: none;
@@ -652,8 +651,8 @@ a.sub-bubble {
 
 .social-link:hover {
     color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: #f8fafc;
+    border-color: var(--border-highlight);
     transform: translateY(-1px);
 }
 
@@ -712,9 +711,9 @@ body.drawer-open {
 .drawer-backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(5, 8, 15, 0.75);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .drawer-panel {
@@ -724,9 +723,9 @@ body.drawer-open {
     bottom: 0;
     width: 100%;
     max-width: 700px;
-    background: #14161b;
+    background: #ffffff;
     border-left: 1px solid var(--border-subtle);
-    box-shadow: -15px 0 50px rgba(0, 0, 0, 0.7);
+    box-shadow: -10px 0 40px rgba(15, 23, 42, 0.15);
     display: flex;
     flex-direction: column;
     transform: translateX(100%);
@@ -746,7 +745,7 @@ body.drawer-open {
     align-items: flex-start;
     gap: 1rem;
     padding: 1.75rem 2rem;
-    background: rgba(20, 22, 27, 0.96);
+    background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-subtle);
 }
@@ -765,7 +764,7 @@ body.drawer-open {
     font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: -0.02em;
-    color: #ffffff;
+    color: var(--text-primary);
     line-height: 1.25;
 }
 
@@ -776,7 +775,7 @@ body.drawer-open {
     width: 36px;
     height: 36px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.05);
+    background: #f1f5f9;
     border: 1px solid var(--border-subtle);
     color: var(--text-secondary);
     cursor: pointer;
@@ -785,9 +784,9 @@ body.drawer-open {
 }
 
 .drawer-close-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.2);
+    background: #e2e8f0;
+    color: var(--text-primary);
+    border-color: #cbd5e1;
 }
 
 .drawer-body {
@@ -805,7 +804,7 @@ body.drawer-open {
     justify-content: space-between;
     align-items: center;
     padding: 1.15rem 2rem;
-    background: rgba(20, 22, 27, 0.96);
+    background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(12px);
     border-top: 1px solid var(--border-subtle);
 }
@@ -831,14 +830,14 @@ body.drawer-open {
 .cs-heading {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-primary);
     margin-bottom: 0.85rem;
 }
 
 .cs-text {
     font-size: 0.985rem;
     line-height: 1.7;
-    color: var(--text-secondary);
+    color: #334155;
     margin-bottom: 1rem;
 }
 
@@ -854,7 +853,7 @@ body.drawer-open {
 }
 
 .cs-kpi-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: #f8fafc;
     border: 1px solid var(--border-subtle);
     border-radius: 10px;
     padding: 1rem 1.25rem;
@@ -863,7 +862,7 @@ body.drawer-open {
 .cs-kpi-value {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -0.02em;
     line-height: 1.2;
     margin-bottom: 0.25rem;
@@ -889,7 +888,7 @@ body.drawer-open {
     position: relative;
     padding-left: 1.5rem;
     font-size: 0.975rem;
-    color: var(--text-secondary);
+    color: #334155;
     line-height: 1.6;
 }
 
@@ -905,19 +904,19 @@ body.drawer-open {
 .cs-subheading {
     font-size: 1.05rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-primary);
     margin: 1.5rem 0 0.65rem;
     letter-spacing: -0.01em;
 }
 
 .cs-flow-box {
-    background: rgba(2, 132, 199, 0.05);
-    border: 1px solid rgba(2, 132, 199, 0.22);
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
     border-radius: 8px;
     padding: 0.9rem 1.15rem;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-size: 0.8rem;
-    color: var(--accent-color);
+    color: var(--text-primary);
     line-height: 1.55;
     overflow-x: auto;
     white-space: pre-wrap;
@@ -926,7 +925,8 @@ body.drawer-open {
 }
 
 .cs-callout-card {
-    background: rgba(255, 255, 255, 0.025);
+    background: #f8fafc;
+    border: 1px solid var(--border-subtle);
     border-left: 3px solid var(--accent-color);
     border-radius: 0 8px 8px 0;
     padding: 0.85rem 1.15rem;
@@ -936,7 +936,7 @@ body.drawer-open {
 .cs-callout-title {
     font-size: 0.95rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-primary);
     margin-bottom: 0.35rem;
 }
 
@@ -948,21 +948,22 @@ body.drawer-open {
 
 .cs-patent-card {
     display: block;
-    background: rgba(255, 255, 255, 0.025);
+    background: #ffffff;
     border: 1px solid var(--border-subtle);
     border-radius: 10px;
     padding: 1rem 1.25rem;
     margin-bottom: 0.85rem;
     text-decoration: none;
     color: inherit;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
     transition: all var(--transition-normal);
 }
 
 .cs-patent-card:hover {
-    background: rgba(255, 255, 255, 0.06);
+    background: #f8fafc;
     border-color: var(--border-highlight);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
 
 .cs-patent-card-header {
@@ -992,7 +993,7 @@ body.drawer-open {
 .cs-patent-title {
     font-size: 1rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-primary);
     margin-bottom: 0.35rem;
     line-height: 1.35;
 }
@@ -1011,7 +1012,7 @@ body.drawer-open {
 }
 
 .cs-meta-item {
-    background: rgba(255, 255, 255, 0.025);
+    background: #f8fafc;
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
     padding: 0.65rem 0.9rem;
@@ -1028,8 +1029,8 @@ body.drawer-open {
 
 .cs-meta-val {
     font-size: 0.875rem;
-    color: #ffffff;
-    font-weight: 500;
+    color: var(--text-primary);
+    font-weight: 600;
     line-height: 1.4;
 }
 
@@ -1039,7 +1040,7 @@ body.drawer-open {
     margin: 1.25rem 0;
     border-radius: 8px;
     border: 1px solid var(--border-subtle);
-    background: rgba(255, 255, 255, 0.015);
+    background: #ffffff;
 }
 
 .cs-table {
@@ -1051,8 +1052,8 @@ body.drawer-open {
 }
 
 .cs-table th {
-    background: rgba(255, 255, 255, 0.04);
-    color: #ffffff;
+    background: #f8fafc;
+    color: var(--text-primary);
     font-weight: 700;
     padding: 0.85rem 1rem;
     border-bottom: 1px solid var(--border-subtle);
@@ -1063,7 +1064,7 @@ body.drawer-open {
 
 .cs-table td {
     padding: 0.85rem 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #f1f5f9;
     color: var(--text-secondary);
     line-height: 1.6;
     vertical-align: top;
@@ -1074,7 +1075,7 @@ body.drawer-open {
 }
 
 .cs-table td strong {
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 .cs-badge-deterministic {
@@ -1083,9 +1084,9 @@ body.drawer-open {
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 700;
-    background: rgba(16, 185, 129, 0.15);
-    color: #34d399;
-    border: 1px solid rgba(16, 185, 129, 0.3);
+    background: rgba(16, 185, 129, 0.1);
+    color: #047857;
+    border: 1px solid rgba(16, 185, 129, 0.25);
     white-space: nowrap;
 }
 
@@ -1095,9 +1096,9 @@ body.drawer-open {
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 700;
-    background: rgba(245, 158, 11, 0.15);
-    color: #fbbf24;
-    border: 1px solid rgba(245, 158, 11, 0.3);
+    background: rgba(217, 119, 6, 0.1);
+    color: #b45309;
+    border: 1px solid rgba(217, 119, 6, 0.25);
     white-space: nowrap;
 }
 

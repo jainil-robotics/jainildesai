@@ -24,11 +24,17 @@ document.addEventListener('DOMContentLoaded', () => {
             hash: 'case-study-first-time-robotics',
             templateId: 'content-first-time-robotics'
         },
+        'physical-ai': {
+            title: 'Building an Enterprise Foundation for Physical AI & Decoupled Robotics Safety',
+            tag: 'Physical AI, RIA 15.08 Decoupled Safety & VDA 5050 Middleware',
+            hash: 'case-study-physical-ai',
+            templateId: 'content-physical-ai'
+        },
         'software-strategy': {
-            title: 'Software Strategy for Unlocking Hardware',
-            tag: 'Distributed Orchestration & Real-Time Control',
-            hash: 'case-study-software-strategy',
-            templateId: 'content-software-strategy'
+            title: 'Building an Enterprise Foundation for Physical AI & Decoupled Robotics Safety',
+            tag: 'Physical AI, RIA 15.08 Decoupled Safety & VDA 5050 Middleware',
+            hash: 'case-study-physical-ai',
+            templateId: 'content-physical-ai'
         },
         'pharma-manufacturing': {
             title: 'Pharmaceutical Manufacturing and Data Capturing',
@@ -93,6 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle deep-linking via URL hash on load
     function checkHash() {
         const hash = window.location.hash.replace('#', '');
+        if (hash === 'case-study-software-strategy') {
+            openDrawer('physical-ai', true);
+            return;
+        }
         for (const [key, val] of Object.entries(caseStudyData)) {
             if (val.hash === hash) {
                 openDrawer(key, false);

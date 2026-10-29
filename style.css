@@ -1102,9 +1102,10 @@ body.drawer-open {
     white-space: nowrap;
 }
 
-/* Hidden templates store */
-.case-study-template-store {
-    display: none;
+/* Hidden templates / crawlable content store */
+.case-study-template-store,
+.cs-stored-content[hidden] {
+    display: none !important;
 }
 
 /* ==========================================================================
